@@ -1,0 +1,8 @@
+plugin.af6bus {
+  baseURL = https://freundlieb.ch/
+  footerPid = 4
+}
+
+[applicationContext == "Development"]
+  plugin.af6bus.baseURL = http://localhost:1337/
+[end]

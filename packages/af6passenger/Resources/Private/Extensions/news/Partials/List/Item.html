@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+    <article class="newslist__item newslist__item--gradient-{newsitem.gradientColor}">
+        <div class="newslist__item__header">
+            <div class="newslist__item__title--row">
+                <h4 class="newslist__item__title">{newsItem.title}</h4>
+                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="newslist__item__link">
+                    <f:image src="EXT:af6passenger/Resources/Public/Icons/arrow.svg" class="newslist__item__link--icon" />
+                </n:link>
+            </div>
+            <f:if condition="{newsItem.teaser}">
+                <div class="newslist__item__subtitle--row">
+                    <span class="newslist__item__subtitle">{newsItem.teaser}</span>
+                </div>
+            </f:if>
+        </div>
+        <f:if condition="{newsItem.mediaPreviews}">
+            <f:then>
+                <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                    <f:image
+                        class="newslist__item__cover"
+                        image="{mediaElement}"
+                        title="{mediaElement.originalResource.title}"
+                        alt="{mediaElement.originalResource.alternative}"
+                        loading="{settings.list.media.image.lazyLoading}"
+                        maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}"
+                        maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"
+                    />
+                </f:alias>
+            </f:then>
+            <f:else>
+                <div class="newslist__item__cover--fallback"></div>
+            </f:else>
+        </f:if>
+    </article>
+
+</html>

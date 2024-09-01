@@ -23,6 +23,10 @@ TCAdefaults.tt_content.sectionIndex = 0
 TCEFORM.tt_content.frame_class {
   removeItems = none, ruler-before, ruler-after, indent, indent-left, indent-right
 
+  addItems {
+    smaller-content = Smaller content width
+  }
+
 #  types {
 #    ctype.addItems {
 #      frame-class = LayoutName

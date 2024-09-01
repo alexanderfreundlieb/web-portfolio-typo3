@@ -1,32 +1,46 @@
 /* Fonts */
-$fonts: 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap',
-        'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap',
-        'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+$fonts: 'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap',
+        'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',
+        'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap';
 
 /* Colors */
+$transparent-background: #f2f2f20d;
+$transparent-border: #f2f2f21a;
+
 $black: #1D1D1F;
 $white: #F5F5F7;
 $gray: #808080;
 $gray-medium: #AFAFAF;
 $gray-bright: #E3E3E3;
+$red: #9c2b2e;
 
-$primary: #E65F78;
+$white-secondary: adjust-color($white, $alpha: -0.4);
+$white-disabled: adjust-color($white, $alpha: -0.62);
 
-$main-background: $white;
-$error-color: $primary;
+$primary: $white;
+
+$gradient-default: radial-gradient(circle at 50% 0, #ffffff4d, #0000);
+$gradient-blue: radial-gradient(circle at 50% 0, #2a454b, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000);
+$gradient-purple: radial-gradient(circle at 50% 0, #5e435d, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000);
+$gradient-taupe: radial-gradient(circle at 50% 0, #9b8074, #0000 80%), radial-gradient(circle at 50% 0, #1f140d, #0000);
+
+$main-background: $black;
+$error-color: $red;
 
 /* Background colors */
 $background-colors: ('black', $black), ('gray', $gray-bright);
+$background-gradients: ('blue', $gradient-blue), ('purple', $gradient-purple), ('taupe', $gradient-taupe);
 
 /* Font styles */
-$font-family: 'Mulish', sans-serif;
-$font-family-heading-1: 'Montserrat', sans-serif;
-$font-family-headings: 'Poppins', sans-serif;
+$font-family: 'Source Sans 3', sans-serif;
+$font-family-headings: 'Open Sans', sans-serif;
+$font-family-highlight: 'Bitter', serif;
 $font-weight-normal: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
-$font-size: 20px;
+$font-size: 18px;
 $line-height: 1.5;
-$font-color: $black;
+$font-color: $white;
 
 /* Grid */
 $grid-max-width: 1400px;

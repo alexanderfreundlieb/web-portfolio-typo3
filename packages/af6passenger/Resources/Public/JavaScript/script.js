@@ -37,6 +37,14 @@ $(document).ready(function() {
   $('.navigation__mobile .navigation__link').click(function (){
     $('.navigation__mobile__burger--input').prop( "checked", false );
   });
+
+  /** Language Switcher **/
+  const languageWrap = $('.navigation--language');
+  const languageSwitcher = languageWrap.find('.navigation__button');
+  languageSwitcher.click(function() {
+    $(this).toggleClass('navigation__button--clicked');
+    languageWrap.toggleClass('navigation--open');
+  })
 });
 
 window.addEventListener('load', function() {

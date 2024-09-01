@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" target-language="de" original="messages" date="2024-08-18T22:26:59Z" product-name="af6passenger">
+		<header/>
+		<body>
+			<trans-unit id="tca.tx_news_domain_model_news.gradient-color">
+				<source>Gradient color</source>
+				<target>Farbverlauf</target>
+			</trans-unit>
+			<trans-unit id="tca.tx_news_domain_model_news.gradient-color.description">
+				<source>Gradient color shown on hover</source>
+				<target>Angezeigter Farbverlauf bei Hover</target>
+			</trans-unit>
+			<trans-unit id="tca.tx_news_domain_model_news.gradient-color.default">
+				<source>Default gradient</source>
+				<target>Standard Farbverlauf</target>
+			</trans-unit>
+			<trans-unit id="tca.tx_news_domain_model_news.gradient-color.blue">
+				<source>Blue gradient</source>
+				<target>Blauer Farbverlauf</target>
+			</trans-unit>
+			<trans-unit id="tca.tx_news_domain_model_news.gradient-color.purple">
+				<source>Purple gradient</source>
+				<target>Violeter Farbverlauf</target>
+			</trans-unit>
+			<trans-unit id="tca.tx_news_domain_model_news.gradient-color.taupe">
+				<source>Taupe gradient</source>
+				<target>Taupe Farbverlauf</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

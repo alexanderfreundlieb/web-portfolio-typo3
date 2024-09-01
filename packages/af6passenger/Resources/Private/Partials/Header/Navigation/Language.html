@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{navigation}">
+    <nav class="navigation navigation--language">
+        <div class="navigation__button">
+            <f:image src="EXT:af6passenger/Resources/Public/Icons/globe.svg" class="navigation__button__icon navigation__button__icon--open" />
+            <f:image src="EXT:af6passenger/Resources/Public/Icons/remove.svg" class="navigation__button__icon navigation__button__icon--close" />
+        </div>
+        <ul class="navigation__list">
+            <f:for each="{navigation}" as="item">
+                <li class="navigation__item{f:if(condition:item.active, then:' navigation__item--active')}{f:if(condition: item.available, else: ' navigation__item--disabled')}">
+                    <f:if condition="{item.available}">
+                        <f:then>
+                            <a href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}" class="navigation__link{f:if(condition:item.active, then:' navigation__link--active')}">
+                                <span class="navigation__text{f:if(condition:item.active, then:' navigation__text--active')}">{item.navigationTitle}</span>
+                            </a>
+                        </f:then>
+                        <f:else>
+                            <span class="navigation__text{f:if(condition:item.active, then:' navigation__text--active')}">{item.navigationTitle}</span>
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</f:if>
+
+</html>
