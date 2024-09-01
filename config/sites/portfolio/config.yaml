@@ -1,0 +1,30 @@
+base: 'https://freundlieb.ch/'
+baseVariants:
+  -
+    base: 'https://localhost/portfolio/public/'
+    condition: 'applicationContext == "Development"'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_CH.UTF-8
+    navigationTitle: Deutsch
+    flag: de
+    hreflang: de-CH
+    websiteTitle: ''
+  -
+    title: English
+    enabled: true
+    locale: en_GB.UTF-8
+    hreflang: en-GB
+    base: /en
+    websiteTitle: ''
+    navigationTitle: English
+    fallbackType: strict
+    fallbacks: ''
+    flag: gb
+    languageId: 1
+rootPageId: 1
+websiteTitle: 'Portfolio - Alexander Freundlieb'
