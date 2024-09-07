@@ -45,6 +45,28 @@ $(document).ready(function() {
     $(this).toggleClass('navigation__button--clicked');
     languageWrap.toggleClass('navigation--open');
   })
+
+  /** Anchor Links **/
+  var pathname = window.location.href.split('#')[0];
+  $('a[href^="#"]').each(function() {
+    var $this = $(this),
+      link = $this.attr('href');
+    $this.attr('href', pathname + link);
+  });
+
+  /** Add text to news images **/
+  const newsSections = $('.newsdetail__content-elements > div');
+  newsSections.each(function(i) {
+    const media = $(this).find('figure');
+    if (media.length > 0) {
+      const mediaCaption = media.find('figcaption');
+      mediaCaption.each(function(j) {
+        $(this).prepend('<span class="newsdetail__media__caption--number">' + (i + 1) + '.' + (j + 1) + '</span>');
+        const mediaType = $(this).attr('data-media-type');
+        $(this).append('<span class="newsdetail__media__caption--type">' + mediaType + '</span>');
+      });
+    }
+  });
 });
 
 window.addEventListener('load', function() {
