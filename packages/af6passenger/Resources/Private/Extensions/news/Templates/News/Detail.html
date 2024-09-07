@@ -1,0 +1,126 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+    <div class="newsdetail__container">
+        <f:if condition="{settings.backPid}">
+            <div class="newsdetail__backlink--wrap">
+                <f:link.page class="newsdetail__backlink" pageUid="{settings.backPid}">
+                    <f:image src="EXT:af6passenger/Resources/Public/Icons/arrow.svg" class="newsdetail__backlink--icon" />
+                    <f:translate key="LLL:EXT:af6passenger/Resources/Private/Language/locallang.xlf:news.detail.backlink" />
+                </f:link.page>
+            </div>
+        </f:if>
+
+        <f:if condition="{newsItem}">
+            <f:then>
+                <f:comment>Meta Tags</f:comment>
+                <n:format.nothing>
+                    <n:excludeDisplayedNews newsItem="{newsItem}" />
+                    <f:if condition="{settings.detail.showMetaTags}">
+                        <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+                    </f:if>
+                    <f:if condition="{newsItem.alternativeTitle}">
+                        <f:then>
+                            <n:titleTag>
+                                <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+                            </n:titleTag>
+                        </f:then>
+                        <f:else>
+                            <n:titleTag>
+                                <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+                            </n:titleTag>
+                        </f:else>
+                    </f:if>
+                </n:format.nothing>
+
+                <f:comment>Header</f:comment>
+                <div class="newsdetail__header">
+                    <h2 class="heading--h1 newsdetail__title">{newsItem.title}</h2>
+                    <f:if condition="{newsItem.teaser}">
+                        <div class="newsdetail__subtitle">{newsItem.teaser}</div>
+                    </f:if>
+
+                    <f:if condition="{newsItem.mediaNonPreviews}">
+                        <figure class="newsdetail__header__image__container">
+                            <f:alias map="{mediaElement: newsItem.mediaNonPreviews.0}">
+                                <f:if condition="{mediaElement.originalResource.type} == 2">
+                                    <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings, section:'header'}"/>
+                                </f:if>
+                                <f:if condition="{mediaElement.originalResource.type} == 3">
+                                    <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings, section:'header'}"/>
+                                </f:if>
+                                <f:if condition="{mediaElement.originalResource.type} == 4">
+                                    <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings, section:'header'}"/>
+                                </f:if>
+                                <f:if condition="{mediaElement.originalResource.type} == 5">
+                                    <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings, section:'header'}"/>
+                                </f:if>
+                            </f:alias>
+                        </figure>
+                    </f:if>
+                </div>
+
+                <f:comment>Overview</f:comment>
+                <f:if condition="{newsItem.bodytext}">
+                    <section class="newsdetail__overview" id="cOverview">
+                        <f:format.html>{newsItem.bodytext}</f:format.html>
+                    </section>
+                </f:if>
+
+                <f:comment>Highlights</f:comment>
+                <f:if condition="{newsItem.mediaNonPreviews}">
+                    <section class="newsdetail__highlights" id="cHighlights">
+                        <f:render partial="Detail/MediaContainer" arguments="{media:newsItem.mediaNonPreviews, settings:settings, section:'highlights'}" />
+                    </section>
+                </f:if>
+
+                <f:comment>Content Elements</f:comment>
+                <f:if condition="{newsItem.contentElements}">
+                    <section class="newsdetail__content-elements">
+                        <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+                    </section>
+                </f:if>
+
+                <f:comment>Navigation</f:comment>
+                <nav class="newsdetail__navigation">
+                    <ul class="newsdetail__navigation__list">
+                        <li class="newsdetail__navigation__item">
+                            <a href="#cOverview" class="newsdetail__navigation__link">
+                                <span class="newsdetail__navigation__text">
+                                    <f:translate key="LLL:EXT:af6passenger/Resources/Private/Language/locallang.xlf:news.detail.navigation.overview" />
+                                </span>
+                            </a>
+                        </li>
+                        <li class="newsdetail__navigation__item">
+                            <a href="#cHighlights" class="newsdetail__navigation__link">
+                                <span class="newsdetail__navigation__text">
+                                    <f:translate key="LLL:EXT:af6passenger/Resources/Private/Language/locallang.xlf:news.detail.navigation.highlights" />
+                                </span>
+                            </a>
+                        </li>
+                        <f:for each="{newsItem.contentElements}" as="contentElement">
+                            <li class="newsdetail__navigation__item">
+                                <a href="#c{contentElement.uid}" class="newsdetail__navigation__link">
+                                    <span class="newsdetail__navigation__text">
+                                        {contentElement.header}
+                                    </span>
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </f:then>
+            <f:else>
+
+            </f:else>
+        </f:if>
+    </div>
+
+</f:section>
+</html>
