@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2024-08-18T22:26:59Z" product-name="af6passenger">
+		<header/>
+		<body>
+			<trans-unit id="news.detail.media.type.gif">
+				<source>GIF</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.jpg">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.jpeg">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.png">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.pdf">
+				<source>Vector</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.svg">
+				<source>Vector</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.mp4">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.ogg">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.webm">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.youtube">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.vimeo">
+				<source>Video</source>
+			</trans-unit>
+
+			<trans-unit id="news.detail.backlink">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="news.detail.navigation.overview">
+				<source>Overview</source>
+			</trans-unit>
+			<trans-unit id="news.detail.navigation.highlights">
+				<source>Highlights</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

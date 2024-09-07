@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" target-language="de" original="messages" date="2024-08-18T22:26:59Z" product-name="af6passenger">
+		<header/>
+		<body>
+			<trans-unit id="news.detail.media.type.gif">
+				<source>GIF</source>
+				<target>GIF</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.jpg">
+				<source>Image</source>
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.jpeg">
+				<source>Image</source>
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.png">
+				<source>Image</source>
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.pdf">
+				<source>Vector</source>
+				<target>Vektor</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.svg">
+				<source>Vector</source>
+				<target>Vektor</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.mp4">
+				<source>Video</source>
+				<target>Video</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.ogg">
+				<source>Video</source>
+				<target>Video</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.webm">
+				<source>Video</source>
+				<target>Video</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.youtube">
+				<source>Video</source>
+				<target>Video</target>
+			</trans-unit>
+			<trans-unit id="news.detail.media.type.vimeo">
+				<source>Video</source>
+				<target>Video</target>
+			</trans-unit>
+
+			<trans-unit id="news.detail.backlink">
+				<source>Back</source>
+				<target>Zurück</target>
+			</trans-unit>
+			<trans-unit id="news.detail.navigation.overview">
+				<source>Overview</source>
+				<target>Übersicht</target>
+			</trans-unit>
+			<trans-unit id="news.detail.navigation.highlights">
+				<source>Highlights</source>
+				<target>Highlights</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
