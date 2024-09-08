@@ -67,6 +67,24 @@ $(document).ready(function() {
       });
     }
   });
+
+  /** News Content Navigation **/
+  window.onscroll = function () {
+    var scrollPos = $(document).scrollTop();
+    $('.newsdetail__navigation__link').each(function () {
+      var currLink = $(this);
+      var currLinkHref = currLink.attr("href");
+      var anchor = $(currLinkHref.substring(currLinkHref.lastIndexOf('#')));
+      var refElement = anchor.parent();
+      if (anchor.position().top - 20 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.newsdetail__navigation__link').removeClass("newsdetail__navigation__link--active");
+        currLink.addClass("newsdetail__navigation__link--active");
+      }
+      else{
+        currLink.removeClass("newsdetail__navigation__link--active");
+      }
+    });
+  };
 });
 
 window.addEventListener('load', function() {
