@@ -87,6 +87,16 @@
         &__container {
             width: 90%;
             margin: 0 auto;
+
+            // TODO: Replace with -gradient class
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: $gradient-default-fade;
+                opacity: 0.4;
+                z-index: -1;
+            }
         }
 
         &__backlink {
