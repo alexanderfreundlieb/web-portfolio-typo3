@@ -84,6 +84,11 @@
     }
 
     &detail {
+        &__container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
         &__backlink {
             display: flex;
             align-items: center;
@@ -91,7 +96,7 @@
             border: 1px solid $transparent-border;
             backdrop-filter: blur(15px);
             border-radius: 24px;
-            padding: 0.5em 0.75em;
+            padding: 0.5em 1em;
             color: $font-color;
             text-decoration: none;
 
@@ -108,7 +113,7 @@
 
             &--wrap {
                 position: fixed;
-                top: $nav-height;
+                top: calc(#{$nav-height} + 1rem);
                 left: calc((100% - #{$grid-max-width}) / 2);
             }
 
@@ -119,6 +124,41 @@
                 transform: rotate(180deg);
 
                 transition: translate .2s ease-in-out;
+            }
+        }
+
+        &__navigation {
+            position: fixed;
+            top: calc(#{$nav-height} + 1rem);
+            right: calc((100% - #{$grid-max-width}) / 2);
+            font-size: 0.7777em;
+
+            &__title {
+                color: $white-secondary;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+
+            &__list {
+                list-style: none;
+                padding: 0;
+                padding-top: 1em;
+                color: $white-disabled;
+            }
+
+            &__item {
+                padding: 1em 0;
+            }
+
+            &__link {
+                text-decoration: none;
+                color: inherit;
+
+                transition: color .2s ease;
+
+                &:hover, &:focus, &--active {
+                    color: $white-secondary;
+                }
             }
         }
     }
