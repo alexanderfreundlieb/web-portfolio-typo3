@@ -82,4 +82,44 @@
             // TODO: Add missing image fallback
         }
     }
+
+    &detail {
+        &__backlink {
+            display: flex;
+            align-items: center;
+            background-color: $transparent-background;
+            border: 1px solid $transparent-border;
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 0.5em 0.75em;
+            color: $font-color;
+            text-decoration: none;
+
+            transition: .2s ease-in-out;
+
+            &:hover {
+                background-color: rgba($transparent-background, 0.08);
+                border-color: rgba($transparent-border, 0.2);
+
+                .newsdetail__backlink--icon {
+                    translate: -0.25em;
+                }
+            }
+
+            &--wrap {
+                position: fixed;
+                top: $nav-height;
+                left: calc((100% - #{$grid-max-width}) / 2);
+            }
+
+            &--icon {
+                height: 0.7778em;
+                width: auto;
+                margin-right: 0.5em;
+                transform: rotate(180deg);
+
+                transition: translate .2s ease-in-out;
+            }
+        }
+    }
 }
