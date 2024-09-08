@@ -52,6 +52,10 @@
 				<source>Back</source>
 				<target>Zurück</target>
 			</trans-unit>
+			<trans-unit id="news.detail.navigation.title">
+				<source>Content</source>
+				<target>Inhalt</target>
+			</trans-unit>
 			<trans-unit id="news.detail.navigation.overview">
 				<source>Overview</source>
 				<target>Übersicht</target>

@@ -40,6 +40,9 @@
 			<trans-unit id="news.detail.backlink">
 				<source>Back</source>
 			</trans-unit>
+			<trans-unit id="news.detail.navigation.title">
+				<source>Content</source>
+			</trans-unit>
 			<trans-unit id="news.detail.navigation.overview">
 				<source>Overview</source>
 			</trans-unit>
