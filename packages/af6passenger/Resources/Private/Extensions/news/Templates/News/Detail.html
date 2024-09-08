@@ -108,13 +108,15 @@
                             </a>
                         </li>
                         <f:for each="{newsItem.contentElements}" as="contentElement">
-                            <li class="newsdetail__navigation__item">
-                                <a href="#c{contentElement.uid}" class="newsdetail__navigation__link">
-                                    <span class="newsdetail__navigation__text">
-                                        {contentElement.header}
-                                    </span>
-                                </a>
-                            </li>
+                            <f:if condition="{contentElement.header}">
+                                <li class="newsdetail__navigation__item">
+                                    <a href="#c{contentElement.uid}" class="newsdetail__navigation__link">
+                                        <span class="newsdetail__navigation__text">
+                                            {contentElement.header}
+                                        </span>
+                                    </a>
+                                </li>
+                            </f:if>
                         </f:for>
                     </ul>
                 </nav>
