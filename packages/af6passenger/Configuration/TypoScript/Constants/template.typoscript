@@ -6,3 +6,7 @@ plugin.af6bus {
 [applicationContext == "Development"]
   plugin.af6bus.baseURL = http://localhost:1337/
 [end]
+
+// Media
+styles.content.textmedia.maxW = 1920
+styles.content.textmedia.maxWInText = 720

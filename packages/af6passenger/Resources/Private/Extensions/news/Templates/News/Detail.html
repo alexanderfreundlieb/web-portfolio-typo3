@@ -47,7 +47,7 @@
                     </f:if>
 
                     <f:if condition="{newsItem.mediaNonPreviews}">
-                        <figure class="newsdetail__header__image__container">
+                        <div class="newsdetail__header__image__container">
                             <f:alias map="{mediaElement: newsItem.mediaNonPreviews.0}">
                                 <f:if condition="{mediaElement.originalResource.type} == 2">
                                     <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings, section:'header'}"/>
@@ -62,7 +62,7 @@
                                     <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings, section:'header'}"/>
                                 </f:if>
                             </f:alias>
-                        </figure>
+                        </div>
                     </f:if>
                 </div>
 
