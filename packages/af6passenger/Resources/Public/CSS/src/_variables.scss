@@ -20,13 +20,18 @@ $white-disabled: adjust-color($white, $alpha: -0.62);
 
 $primary: $white;
 
-$gradient-default: radial-gradient(circle at 50% 0, #ffffff4d, #0000);
-$gradient-blue: radial-gradient(circle at 50% 0, #2a454b, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000);
-$gradient-purple: radial-gradient(circle at 50% 0, #5e435d, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000);
-$gradient-taupe: radial-gradient(circle at 50% 0, #9b8074, #0000 80%), radial-gradient(circle at 50% 0, #1f140d, #0000);
-
 $main-background: $black;
 $error-color: $red;
+
+/* Gradients */
+$gradient-default: radial-gradient(circle at 50% 0, #ffffff4d, #0000);
+$gradient-default-fade: radial-gradient(circle at 50% 0, #ffffff4d, #0000 80%, $main-background);
+$gradient-blue: radial-gradient(circle at 50% 0, #2a454b, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000);
+$gradient-blue-fade: radial-gradient(circle at 50% 0, #2a454b, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000 80%, $main-background);
+$gradient-purple: radial-gradient(circle at 50% 0, #5e435d, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000);
+$gradient-purple-fade: radial-gradient(circle at 50% 0, #5e435d, #0000 80%), radial-gradient(circle at 50% 0, #08203e, #0000 80%, $main-background);
+$gradient-taupe: radial-gradient(circle at 50% 0, #9b8074, #0000 80%), radial-gradient(circle at 50% 0, #1f140d, #0000);
+$gradient-taupe-fade: radial-gradient(circle at 50% 0, #9b8074, #0000 80%), radial-gradient(circle at 50% 0, #1f140d, #0000 80%, $main-background);
 
 /* Background colors */
 $background-colors: ('black', $black), ('gray', $gray-bright);
