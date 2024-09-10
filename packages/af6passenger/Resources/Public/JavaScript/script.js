@@ -55,7 +55,7 @@ $(document).ready(function() {
   });
 
   /** Add text to news images **/
-  const newsSections = $('.newsdetail__content-elements > div');
+  const newsSections = $('.newsdetail__content-elements__section > div');
   newsSections.each(function(i) {
     const media = $(this).find('figure');
     if (media.length > 0) {

@@ -2,7 +2,7 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
-<figure class="newsdetail__{section}__media__container">
+<figure class="newsdetail__{section}__media__figure">
 	<f:if condition="{mediaElement.link}">
 		<f:then>
 			<f:link.typolink parameter="{mediaElement.link}" target="{n:targetLink(link:mediaElement.link)}">
@@ -52,7 +52,7 @@
 </figure>
 <f:if condition="{mediaElement.description} && {section} != 'header'">
     <figcaption class="newsdetail__media__caption">
-        <span class="newsdetail__media__caption--number">0.{i.cycle}</span>
+        <span class="newsdetail__media__caption--number">0.{mediaNumber}</span>
         {mediaElement.description}
         <span class="newsdetail__media__caption--type">
             <f:translate key="LLL:EXT:af6passenger/Resources/Private/Language/locallang.xlf:news.detail.media.type.{mediaElement.originalResource.extension}" />

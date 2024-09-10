@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<figure class="newsdetail__{section}__media__container">
+<figure class="newsdetail__{section}__media__figure">
     <f:media
         class="newsdetail__{section}__media newsdetail__{section}__media--video"
         file="{mediaElement}"
@@ -11,7 +11,7 @@
 </figure>
 <f:if condition="{mediaElement.description} && {section} != 'header'">
     <figcaption class="newsdetail__media__caption">
-        <span class="newsdetail__media__caption--number">0.{i.cycle}</span>
+        <span class="newsdetail__media__caption--number">0.{mediaNumber}</span>
         {mediaElement.description}
         <span class="newsdetail__media__caption--type">
             <f:translate key="LLL:EXT:af6passenger/Resources/Private/Language/locallang.xlf:news.detail.media.type.{mediaElement.originalResource.extension}" />

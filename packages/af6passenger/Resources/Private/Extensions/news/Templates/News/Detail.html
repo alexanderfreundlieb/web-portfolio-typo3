@@ -68,21 +68,26 @@
 
                 <f:comment>Overview</f:comment>
                 <f:if condition="{newsItem.bodytext}">
-                    <section class="newsdetail__overview" id="cOverview">
+                    <section class="newsdetail__overview__section" id="cOverview">
                         <f:format.html>{newsItem.bodytext}</f:format.html>
                     </section>
                 </f:if>
 
                 <f:comment>Highlights</f:comment>
                 <f:if condition="{newsItem.mediaNonPreviews}">
-                    <section class="newsdetail__highlights" id="cHighlights">
-                        <f:render partial="Detail/MediaContainer" arguments="{media:newsItem.mediaNonPreviews, settings:settings, section:'highlights'}" />
+                    <section class="newsdetail__highlights__section" id="cHighlights">
+                        <div class="newsdetail__highlights">
+                            <h2 class="heading--h2 newsdetail__highlights__title">
+                                <f:translate key="LLL:EXT:af6passenger/Resources/Private/Language/locallang.xlf:news.detail.navigation.highlights" />
+                            </h2>
+                            <f:render partial="Detail/MediaContainer" arguments="{media:newsItem.mediaNonPreviews, settings:settings, section:'highlights', exclude:1}" />
+                        </div>
                     </section>
                 </f:if>
 
                 <f:comment>Content Elements</f:comment>
                 <f:if condition="{newsItem.contentElements}">
-                    <section class="newsdetail__content-elements">
+                    <section class="newsdetail__content-elements__section">
                         <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
                     </section>
                 </f:if>
