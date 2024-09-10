@@ -6,6 +6,7 @@ $fonts: 'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,
 
 /* Colors */
 $transparent-background: #f2f2f20d;
+$transparent-background-dark: #0000000d;
 $transparent-border: #f2f2f21a;
 
 $black: #1D1D1F;
@@ -47,7 +48,7 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-size: 18px;
 $line-height: 1.5;
-$font-color: $white;
+$font-color: $white-secondary;
 
 /* Grid */
 $grid-max-width: 1400px;
