@@ -1,7 +1,7 @@
 base: 'https://freundlieb.ch/'
 baseVariants:
   -
-    base: 'http://localhost:1337/'
+    base: 'https://srv608783.hstgr.cloud/'
     condition: 'applicationContext == "Development"'
 languages:
   -

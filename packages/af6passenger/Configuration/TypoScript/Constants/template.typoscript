@@ -4,7 +4,7 @@ plugin.af6bus {
 }
 
 [applicationContext == "Development"]
-  plugin.af6bus.baseURL = http://localhost:1337/
+  plugin.af6bus.baseURL = https://srv608783.hstgr.cloud/
 [end]
 
 // Media
