@@ -1,6 +1,6 @@
 plugin.af6bus {
   baseURL = https://freundlieb.ch/
-  footerPid = 4
+  footerPid = 6
 }
 
 [applicationContext == "Development"]
