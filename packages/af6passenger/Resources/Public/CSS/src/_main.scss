@@ -566,6 +566,29 @@ a {}
 }
 
 /******************************************************
+ * Textmedia
+ ******************************************************/
+.frame__type--textmedia {
+    .ce-gallery {
+        .image, .video {
+            img, video {
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+                padding: 8px;
+                border: 2px solid $transparent-border;
+            }
+        }
+    }
+
+    .frame[class*="col"] & {
+        .ce-bodytext:has(+ .ce-gallery), .ce-gallery + .ce-bodytext {
+            padding: 3em 2em;
+        }
+    }
+}
+
+/******************************************************
  * Footer
  ******************************************************/
 .footer {}

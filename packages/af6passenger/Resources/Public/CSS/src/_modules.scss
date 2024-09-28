@@ -282,13 +282,6 @@
                 margin-top: 2.5em;
 
                 .image, .video {
-                    img, video {
-                        width: 100%;
-                        height: auto;
-                        border-radius: 16px;
-                        border: 2px solid $transparent-border;
-                    }
-
                     figcaption {
                         text-align: right;
                         font-size: 0.6666em;
