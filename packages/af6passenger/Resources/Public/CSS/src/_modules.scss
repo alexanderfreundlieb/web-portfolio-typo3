@@ -12,17 +12,20 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(255, 255, 255, 0.2);
             overflow: hidden;
 
-            // TODO: Replace with -gradient class
-            &::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                border-radius: inherit;
-                background-image: $gradient-default;
-                z-index: -1;
-                opacity: 0;
+            @each $gradient-class, $gradient in $background-gradients {
+                &--gradient-#{$gradient-class} {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: inherit;
+                        background-image: $gradient;
+                        z-index: -1;
+                        opacity: 0;
 
-                transition: opacity 0.4s ease-in-out;
+                        transition: opacity 0.4s ease-in-out;
+                    }
+                }
             }
 
             &:hover {
@@ -88,14 +91,17 @@
             width: 90%;
             margin: 0 auto;
 
-            // TODO: Replace with -gradient class
-            &::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background-image: $gradient-default-fade;
-                opacity: 0.4;
-                z-index: -1;
+            @each $gradient-class, $gradient in $background-gradients-fade {
+                &--gradient-#{$gradient-class}-fade {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background-image: $gradient;
+                        opacity: 0.4;
+                        z-index: -1;
+                    }
+                }
             }
 
             > section {

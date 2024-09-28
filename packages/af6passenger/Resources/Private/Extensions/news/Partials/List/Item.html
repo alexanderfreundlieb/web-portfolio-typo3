@@ -2,7 +2,7 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
-    <article class="newslist__item newslist__item--gradient-{newsitem.gradientColor}">
+    <article class="newslist__item newslist__item--gradient-{f:if(condition:'{newsItem.gradientColor}',then:'{newsItem.gradientColor}',else:'default')}">
         <div class="newslist__item__header">
             <div class="newslist__item__title--row">
                 <h4 class="newslist__item__title">{newsItem.title}</h4>

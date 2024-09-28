@@ -36,7 +36,8 @@ $gradient-taupe-fade: radial-gradient(circle at 50% 0, #9b8074, #0000 80%), radi
 
 /* Background colors */
 $background-colors: ('black', $black), ('gray', $gray-bright);
-$background-gradients: ('blue', $gradient-blue), ('purple', $gradient-purple), ('taupe', $gradient-taupe);
+$background-gradients: ('default', $gradient-default), ('blue', $gradient-blue), ('purple', $gradient-purple), ('taupe', $gradient-taupe);
+$background-gradients-fade: ('default', $gradient-default-fade), ('blue', $gradient-blue-fade), ('purple', $gradient-purple-fade), ('taupe', $gradient-taupe-fade);
 
 /* Font styles */
 $font-family: 'Source Sans 3', sans-serif;

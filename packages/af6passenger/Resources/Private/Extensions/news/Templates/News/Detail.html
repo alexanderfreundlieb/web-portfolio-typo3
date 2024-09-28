@@ -7,7 +7,7 @@
 
 <f:section name="Main">
 
-    <div class="newsdetail__container">
+    <div class="newsdetail__container newsdetail__container--gradient-{f:if(condition:'{newsItem.gradientColor}',then:'{newsItem.gradientColor}',else:'default')}-fade">
         <f:if condition="{settings.backPid}">
             <div class="newsdetail__backlink--wrap">
                 <f:link.page class="newsdetail__backlink" pageUid="{settings.backPid}">
