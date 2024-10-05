@@ -12,4 +12,10 @@ defined('TYPO3') or die();
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['af6mainRTE'] = 'EXT:af6passenger/Configuration/RTE/af6mainRTE.yaml';
 
 // Extend news model
-$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['classes']['Domain/Model/News']['af6passenger'] = 'af6passenger';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\GeorgRinger\News\Domain\Model\News::class] = [
+    'className' => \AlexanderFreundlieb\Af6passenger\Domain\Model\News::class,
+];
+// Extend news repository for extbase internal reasons
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\GeorgRinger\News\Domain\Repository\NewsRepository::class] = [
+    'className' => \AlexanderFreundlieb\Af6passenger\Domain\Repository\NewsRepository::class,
+];
