@@ -1,6 +1,7 @@
 plugin.af6bus {
   baseURL = https://freundlieb.ch/
   footerPid = 6
+  siteLogo = EXT:af6passenger/Resources/Public/Images/logo.svg
 }
 
 [applicationContext == "Development"]

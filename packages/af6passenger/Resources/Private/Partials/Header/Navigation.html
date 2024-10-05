@@ -3,7 +3,9 @@
 
     <div class="header__main">
         <div class="header__logo">
-            <img class="header__logo__img" src="{siteLogo}" alt="Logo {siteName}" />
+            <f:link.page class="header__logo__link" pageUid="{homePid}">
+                <f:image class="header__logo__img" src="{siteLogo}" alt="Logo {siteName}" />
+            </f:link.page>
         </div>
         <div class="navigation__main">
             <f:render partial="Header/Navigation/Main" arguments="{navigation:navigation,pid:data.uid,onePage:onePage}" />
